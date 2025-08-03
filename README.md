@@ -67,13 +67,7 @@ This is an end-to-end data analytics portfolio project that simulates a real-wor
 |--------|---------|
 | `data/` | Cleaned CSV + Excel budget |
 | `sql/` | All transformation queries |
-| `powerbi/` | `.pbix` file + public link |
-| `screenshots/` | UI previews of dashboards |
-
----
-
-## 🔗 Live Dashboard (Power BI Web)
-> 📌 [Click to View Dashboard](https://YOUR-POWERBI-EMBED-LINK.com)
+| `powerbi/` | `.pbix` file |
 
 ---
 
