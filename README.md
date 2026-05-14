@@ -2,15 +2,8 @@
 
 This is an end-to-end data analytics portfolio project that simulates a real-world business
 request from a sales manager. The project covers everything from data extraction and
-transformation in SQL to dashboard development in Power BI.
-
-![Sales Overview](11.png)
-
-
-![Customer Details](12.png)
-
-
-![Product Details](13.png)
+transformation in SQL Server to an interactive Power BI dashboard tracking sales performance
+against budget across customers, products, and geographies.
 
 ---
 
@@ -19,17 +12,19 @@ transformation in SQL to dashboard development in Power BI.
 | Field | Details |
 |-------|---------|
 | **Client** | Sales Manager |
-| **Request** | Replace static Excel reports with an interactive dashboard showing internet sales performance |
-| **Tools** | SQL Server, Power BI, Excel |
+| **Request** | Replace static Excel reports with an interactive dashboard showing internet sales performance vs. budget |
+| **Tools** | SQL Server Express + SSMS, Power BI Desktop, Excel |
+| **Dataset** | AdventureWorksDW 2019/2022 |
+| **Time Period** | 2019 – 2021 (with 2020 as primary focus year) |
 
 ---
 
 ## Tools & Technologies
 
-- **SQL Server Express + SSMS**
-- **Power BI Desktop**
-- **AdventureWorksDW 2019/2022**
-- **Excel** (for budget integration)
+- **SQL Server Express + SSMS** — data extraction and transformation
+- **Power BI Desktop** — data modelling, DAX measures, and dashboard development
+- **AdventureWorksDW 2019/2022** — source data warehouse
+- **Excel** — budget data integration
 
 ---
 
@@ -38,41 +33,87 @@ transformation in SQL to dashboard development in Power BI.
 ### 1. Business Request & Planning
 
 - Parsed a stakeholder email into a formal **Business Demand Overview**
-- Defined **User Stories** for sales managers and sales representatives
+- Defined **User Stories** for both sales managers (overview performance) and sales representatives (customer and product-level detail)
+
+---
 
 ### 2. Data Cleaning in SQL
 
-Created cleaned dimension and fact tables using SQL best practices (joins, filtering, CASE statements, formatting):
+Created cleaned dimension and fact tables using SQL best practices — joins, filtering, CASE statements, column renaming, and date formatting:
 
 | Table | Description |
 |-------|-------------|
-| `Dim_Calendar` | Date dimension for time-based filtering |
-| `Dim_Customers` | Customer attributes and segments |
-| `Dim_Products` | Product hierarchy and categories |
-| `Fact_InternetSales` | Core transactional sales data |
+| `Dim_Calendar` | Date dimension for Year/Month slicing (2019–2021) |
+| `Dim_Customers` | Customer names, cities, and segments |
+| `Dim_Products` | Product names, sub-categories, and categories (Bikes, Accessories, etc.) |
+| `Fact_InternetSales` | Core transactional sales data, one row per order line |
+
+---
 
 ### 3. Power BI Data Model
 
-- Imported all cleaned CSV files alongside the Excel budget file
-- Built a **star schema** with many-to-one relationships
-- Created reusable **DAX Measures** organized in a dedicated "Key Measures" table:
-  - Sales & Budget totals
-  - Sales vs. Budget variance (absolute and %)
+- Imported all cleaned CSV exports from SQL alongside the Excel budget file
+- Built a **star schema** — `Fact_InternetSales` at the centre, connected to all four dimension tables via many-to-one relationships
+- Created a dedicated **"Key Measures"** table with reusable DAX measures:
+
+| Measure | Purpose |
+|---------|---------|
+| `Sales` | Total internet sales revenue |
+| `Budget` | Target budget amount from Excel |
+| `Sales vs Budget` | Absolute variance (Sales − Budget) |
+| `Sales vs Budget %` | Percentage over/under budget |
+
+---
 
 ### 4. Interactive Dashboard
 
-Three report pages, each with slicers for City, Product, and Time:
+The dashboard has three report pages, all filterable by **Year**, **Month**, **Customer City**, **Sub Category**, **Category**, and **Product Name**.
 
-| Page | Visuals |
-|------|---------|
-| **Sales Overview** | KPI cards, bar chart (Top 10), line chart, map |
-| **Customer Details** | Customer breakdown, donut chart, trend line |
-| **Product Details** | Product performance, Top 10 ranking, filters |
+#### Sales Overview
+
+The main landing page showing overall business performance at a glance.
+
+![Sales Overview](11.png)
+
+- **KPI card** — Total Sales of **$16,351,550** vs. Budget of **$15,300,000**, with a positive variance of **+$1,051,550** highlighted in green
+- **Donut chart** — Sales split by product category: Bikes dominate at **93.93%** ($15.3M), with Accessories at 4.09%
+- **Line chart** — Monthly Sales vs. Budget trend showing sales tracking above budget from mid-year onward
+- **Bar chart** — Top 10 Customers by revenue (Jordan Turner leading at $11,484)
+- **Bar chart** — Top 10 Products by revenue (Mountain-200 variants dominating)
+- **Bubble map** — Sales by Customer City across the United States
+
+---
+
+#### Customer Details
+
+A deep-dive page for sales representatives to track individual customer performance.
+
+![Customer Details](12.png)
+
+- **KPI cards** — Headline Sales ($16.3M) and Budget ($15.3M) for consistent context
+- **Bar chart** — Top 10 Customers ranked by total sales, with Jordan Turner, Maurice Shan, and Janet Munoz at the top
+- **Matrix table** — Month-by-month breakdown per customer with row totals, making it easy to spot seasonal buying patterns
+- **Line chart and bubble map** — Sales and Budget trend by month alongside geographic distribution of customers
+
+---
+
+#### Product Details
+
+A deep-dive page for analysing product-level performance.
+
+![Product Details](13.png)
+
+- **Bar chart** — Top 10 Products by revenue, with Mountain-200 Black and Silver variants filling the top 6 positions
+- **Matrix table** — Monthly sales breakdown by product category and individual SKU, with colour-coded highlighting of top performers
+- **Line chart** — Monthly Sales vs. Budget trend by product category
+- **Bubble map** — Geographic sales distribution by customer city
+
+---
 
 ### 5. Publishing
 
-- Published to **Power BI Service**
-- Embedded for web portfolio sharing
+- Exported final `.pbix` file for portfolio sharing
+- Published to **Power BI Service** for web embedding
 
 ---
 
@@ -88,7 +129,9 @@ Three report pages, each with slicers for City, Product, and Time:
 
 ## Key Skills Demonstrated
 
-- Translating business requirements into a structured data model
-- Data cleansing and transformation in SQL
-- KPI design and dashboard UX in Power BI
-- Building interactive, filterable, and well-structured reports
+- Translating a business request into structured user stories and a data model
+- Writing production-style SQL for data cleaning and dimension/fact table creation
+- Building a star schema in Power BI with correct relationship cardinality
+- Authoring DAX measures for KPIs, variance analysis, and budget comparison
+- Designing a multi-page, fully interactive dashboard with consistent slicers across pages
+- Communicating sales insights clearly through appropriate chart types (KPI cards, bar, line, donut, map, matrix)
