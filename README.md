@@ -1,4 +1,4 @@
-# 📊 Sales Performance Dashboard (SQL + Power BI)
+# Sales Performance Dashboard (SQL + Power BI)
 
 This is an end-to-end data analytics portfolio project that simulates a real-world business request from a sales manager. The project covers everything from data extraction and transformation in SQL Server to dashboard development in Power BI.
 
@@ -13,7 +13,7 @@ This is an end-to-end data analytics portfolio project that simulates a real-wor
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 - **SQL Server Express + SSMS**
 - **Power BI Desktop**
 - **AdventureWorksDW 2019/2022**
@@ -21,7 +21,7 @@ This is an end-to-end data analytics portfolio project that simulates a real-wor
 
 ---
 
-## 🧱 Project Workflow
+## Project Workflow
 
 ### 1. **Business Request & Planning**
 - Parsed stakeholder email into a formal **Business Demand Overview**
@@ -47,9 +47,9 @@ This is an end-to-end data analytics portfolio project that simulates a real-wor
 
 ### 4. **Interactive Dashboard**
 - Main Pages:
-  - ✅ Sales Overview
-  - ✅ Customer Details
-  - ✅ Product Details
+  - Sales Overview
+  - Customer Details
+  - Product Details
 - Visuals Used:
   - KPI cards
   - Bar charts (Top 10)
@@ -74,7 +74,7 @@ This is an end-to-end data analytics portfolio project that simulates a real-wor
 
 ---
 
-## 🧠 Key Skills Demonstrated
+## Key Skills Demonstrated
 - Translating business requirements into data models
 - Data cleansing and transformation in SQL
 - KPI design and dashboard UX in Power BI
