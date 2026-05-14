@@ -7,6 +7,14 @@ against budget across customers, products, and geographies.
 
 ---
 
+## Report Preview
+
+| | | |
+|---|---|---|
+| ![Sales Overview](Images/11.png) | ![Customer Details](Images/12.png) | ![Product Details](Images/13.png) |
+
+---
+
 ## Project Overview
 
 | Field | Details |
