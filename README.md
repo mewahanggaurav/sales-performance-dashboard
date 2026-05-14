@@ -2,9 +2,10 @@
 
 This is an end-to-end data analytics portfolio project that simulates a real-world business request from a sales manager. The project covers everything from data extraction and transformation in SQL Server to dashboard development in Power BI.
 
-!(11.png)
-!(12.png)
-!(13.png)
+![Image 11](11.png)
+![Image 12](12.png)
+![Image 13](13.png)
+
 ## 🔍 Project Overview
 
 - Client:  Sales Manager
