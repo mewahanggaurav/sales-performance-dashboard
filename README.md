@@ -1,66 +1,75 @@
 # Sales Performance Dashboard (SQL + Power BI)
 
-This is an end-to-end data analytics portfolio project that simulates a real-world business request from a sales manager. The project covers everything from data extraction and transformation in SQL Server to dashboard development in Power BI.
+This is an end-to-end data analytics portfolio project that simulates a real-world business
+request from a sales manager. The project covers everything from data extraction and
+transformation in SQL to dashboard development in Power BI.
 
-![Image 11](11.png)
-![Image 12](12.png)
-![Image 13](13.png)
+![Sales Overview](11.png)
+
+![Customer Details](12.png)
+
+![Product Details](13.png)
+
+---
 
 ## 🔍 Project Overview
 
-- Client:  Sales Manager
-- Request: Replace static Excel reports with an interactive dashboard showing internet sales performance
-- Tools: SQL Server, Power BI, Excel
+| Field | Details |
+|-------|---------|
+| **Client** | Sales Manager |
+| **Request** | Replace static Excel reports with an interactive dashboard showing internet sales performance |
+| **Tools** | SQL Server, Power BI, Excel |
 
 ---
 
-## Tools & Technologies
+## 🛠️ Tools & Technologies
+
 - **SQL Server Express + SSMS**
 - **Power BI Desktop**
 - **AdventureWorksDW 2019/2022**
-- **Excel (for budget integration)**
+- **Excel** (for budget integration)
 
 ---
 
-## Project Workflow
+## 🔄 Project Workflow
 
-### 1. **Business Request & Planning**
-- Parsed stakeholder email into a formal **Business Demand Overview**
-- Created **User Stories** for sales managers and representatives
+### 1. Business Request & Planning
 
-### 2. **Data Cleaning in SQL**
-- Created cleaned dimension and fact tables:
-  - `Dim_Calendar`
-  - `Dim_Customers`
-  - `Dim_Products`
-  - `Fact_InternetSales`
-- Applied SQL best practices: joins, filtering, formatting, renaming, CASE statements
+- Parsed a stakeholder email into a formal **Business Demand Overview**
+- Defined **User Stories** for sales managers and sales representatives
 
-### 3. **Power BI Data Model**
-- Imported all cleaned CSV files + Excel budget
-- Built relationships (many-to-one, star schema)
-- Defined reusable **Measures** for:
-  - Sales
-  - Budget
-  - Sales vs Budget %
-  - Sales Variance
-- Organized measures into a dedicated “Key Measures” table
+### 2. Data Cleaning in SQL
 
-### 4. **Interactive Dashboard**
-- Main Pages:
-  - Sales Overview
-  - Customer Details
-  - Product Details
-- Visuals Used:
-  - KPI cards
-  - Bar charts (Top 10)
-  - Line charts
-  - Map visualization
-  - Donut chart
-  - Slicers (City, Product, Time)
+Created cleaned dimension and fact tables using SQL best practices (joins, filtering, CASE statements, formatting):
 
-### 5. **Publishing**
-- Published to Power BI Service
+| Table | Description |
+|-------|-------------|
+| `Dim_Calendar` | Date dimension for time-based filtering |
+| `Dim_Customers` | Customer attributes and segments |
+| `Dim_Products` | Product hierarchy and categories |
+| `Fact_InternetSales` | Core transactional sales data |
+
+### 3. Power BI Data Model
+
+- Imported all cleaned CSV files alongside the Excel budget file
+- Built a **star schema** with many-to-one relationships
+- Created reusable **DAX Measures** organized in a dedicated "Key Measures" table:
+  - Sales & Budget totals
+  - Sales vs. Budget variance (absolute and %)
+
+### 4. Interactive Dashboard
+
+Three report pages, each with slicers for City, Product, and Time:
+
+| Page | Visuals |
+|------|---------|
+| **Sales Overview** | KPI cards, bar chart (Top 10), line chart, map |
+| **Customer Details** | Customer breakdown, donut chart, trend line |
+| **Product Details** | Product performance, Top 10 ranking, filters |
+
+### 5. Publishing
+
+- Published to **Power BI Service**
 - Embedded for web portfolio sharing
 
 ---
@@ -69,14 +78,15 @@ This is an end-to-end data analytics portfolio project that simulates a real-wor
 
 | Folder | Content |
 |--------|---------|
-| `data/` | Cleaned CSV + Excel budget |
-| `sql/` | All transformation queries |
-| `powerbi/` | `.pbix` file |
+| `data/` | Cleaned CSV files + Excel budget |
+| `sql/` | All SQL transformation queries |
+| `powerbi/` | `.pbix` dashboard file |
 
 ---
 
-## Key Skills Demonstrated
-- Translating business requirements into data models
+## 💡 Key Skills Demonstrated
+
+- Translating business requirements into a structured data model
 - Data cleansing and transformation in SQL
 - KPI design and dashboard UX in Power BI
 - Building interactive, filterable, and well-structured reports
