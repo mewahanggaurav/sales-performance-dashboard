@@ -6,13 +6,15 @@ transformation in SQL to dashboard development in Power BI.
 
 ![Sales Overview](11.png)
 
+
 ![Customer Details](12.png)
+
 
 ![Product Details](13.png)
 
 ---
 
-## 🔍 Project Overview
+## Project Overview
 
 | Field | Details |
 |-------|---------|
@@ -22,7 +24,7 @@ transformation in SQL to dashboard development in Power BI.
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 - **SQL Server Express + SSMS**
 - **Power BI Desktop**
@@ -31,7 +33,7 @@ transformation in SQL to dashboard development in Power BI.
 
 ---
 
-## 🔄 Project Workflow
+## Project Workflow
 
 ### 1. Business Request & Planning
 
@@ -74,7 +76,7 @@ Three report pages, each with slicers for City, Product, and Time:
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 | Folder | Content |
 |--------|---------|
@@ -84,7 +86,7 @@ Three report pages, each with slicers for City, Product, and Time:
 
 ---
 
-## 💡 Key Skills Demonstrated
+## Key Skills Demonstrated
 
 - Translating business requirements into a structured data model
 - Data cleansing and transformation in SQL
