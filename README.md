@@ -73,7 +73,7 @@ The dashboard has three report pages, all filterable by **Year**, **Month**, **C
 
 The main landing page showing overall business performance at a glance.
 
-![Sales Overview](images/11.png)
+![Sales Overview](Images/11.png)
 
 - **KPI card** — Total Sales of **$16,351,550** vs. Budget of **$15,300,000**, with a positive variance of **+$1,051,550** highlighted in green
 - **Donut chart** — Sales split by product category: Bikes dominate at **93.93%** ($15.3M), with Accessories at 4.09%
@@ -88,7 +88,7 @@ The main landing page showing overall business performance at a glance.
 
 A deep-dive page for sales representatives to track individual customer performance.
 
-![Customer Details](images/12.png)
+![Customer Details](Images/12.png)
 
 - **KPI cards** — Headline Sales ($16.3M) and Budget ($15.3M) for consistent context
 - **Bar chart** — Top 10 Customers ranked by total sales, with Jordan Turner, Maurice Shan, and Janet Munoz at the top
@@ -101,7 +101,7 @@ A deep-dive page for sales representatives to track individual customer performa
 
 A deep-dive page for analysing product-level performance.
 
-![Product Details](images/13.png)
+![Product Details](Images/13.png)
 
 - **Bar chart** — Top 10 Products by revenue, with Mountain-200 Black and Silver variants filling the top 6 positions
 - **Matrix table** — Monthly sales breakdown by product category and individual SKU, with colour-coded highlighting of top performers
