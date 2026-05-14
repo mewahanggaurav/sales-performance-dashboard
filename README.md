@@ -7,9 +7,9 @@ This is an end-to-end data analytics portfolio project that simulates a real-wor
 !(13.png)
 ## 🔍 Project Overview
 
-- ✅ Client:  Sales Manager
-- ✅ Request: Replace static Excel reports with an interactive dashboard showing internet sales performance
-- ✅ Tools: SQL Server, Power BI, Excel
+- Client:  Sales Manager
+- Request: Replace static Excel reports with an interactive dashboard showing internet sales performance
+- Tools: SQL Server, Power BI, Excel
 
 ---
 
